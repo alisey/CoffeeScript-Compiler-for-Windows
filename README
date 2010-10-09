@@ -1,4 +1,4 @@
-CoffeeScript Compiler
+CoffeeScript Compiler for MS Windows
 
 Usage:
 
@@ -11,5 +11,5 @@ Usage:
   > coffee example.coffee example.js 2>errors.log
     Write errors into the log file instead of command line
   
-  > coffee example.coffee example.js 2>nil
+  > coffee example.coffee example.js 2>nul
     Suppress errors
