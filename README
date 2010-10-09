@@ -1,0 +1,15 @@
+CoffeeScript Compiler
+
+Usage:
+
+  > coffee example.coffee
+    Compile the script and write the output into command line
+    
+  > coffee example.coffee example.js
+    Compile the script and write the output into .js file
+  
+  > coffee example.coffee example.js 2>errors.log
+    Write errors into the log file instead of command line
+  
+  > coffee example.coffee example.js 2>nil
+    Suppress errors
