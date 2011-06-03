@@ -1,0 +1,1 @@
+for /f %%a IN ('dir /b %1\*.coffee') do call coffee.bat %1\%%a %%~na.js
