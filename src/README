@@ -1,0 +1,10 @@
+How to build:
+
+1. Download JSDB binaries from http://www.jsdb.org/
+   You only need jsdb.exe
+2. Download https://raw.github.com/jashkenas/coffee-script/master/extras/coffee-script.js to this directory.
+3. Zip *.js files from this directory to coffee.zip
+4. Concatenate jsdb.exe and coffee.zip:
+   copy /b jsdb.exe+coffee.zip coffee.exe
+5. The resulting coffee.exe is a standalone CoffeeScript compiler
+6. Optionally, change icon with resource editor (e.g. http://icofx.ro)
