@@ -1,10 +1,8 @@
-CoffeeScript Compiler for MS Windows. To learn about CoffeeScript visit [coffeescript.org](http://coffeescript.org). This compiler is OK for trying things out, but for serious use consider installing [Node.js on Cygwin](https://github.com/joyent/node/wiki/Building-node.js-on-Cygwin-%28Windows%29) or using [ExecJS](https://github.com/sstephenson/execjs) gem.
-
-###Installation
-Download coffee.exe to %WINDIR% or add it's path to %PATH% environment variable.
+This is a standalone executable allowing you to compile [CoffeeScript](http://coffeescript.org/) files on Windows.  
+Download coffee.exe to your Windows directory (or any other directory in your %PATH%)
 
 ###Usage
-Same as the original coffee command described at [coffeescript.org](http://coffeescript.org/), but with a limited number of options:
+Same as the original coffee command:
 
     -c, --compile       compile to JavaScript and save as .js files
     -o, --output [DIR]  set the directory for compiled JavaScript
@@ -13,8 +11,16 @@ Same as the original coffee command described at [coffeescript.org](http://coffe
     -v, --version       display CoffeeScript version
     -h, --help          display a list of available options
 
-If a directory is provided as a source, all .coffee files in that directory will be compiled recursively. Unfortunately, JavaScript runtime used by this compiler (JSDB) cannot output to stderr. All errors are logged to stdout.
+If you specify a directory as a source, all .coffee files in that directory will be compiled recursively.
 
-###Updating to latest version of CoffeeScript
-Download https://raw.github.com/jashkenas/coffee-script/master/extras/coffee-script.js to the same directory as coffee.exe and 
-check version by running: coffee --version
+###Updating CoffeeScript
+* Download latest [coffee-script.js](https://raw.github.com/jashkenas/coffee-script/master/extras/coffee-script.js) to the same directory as coffee.exe
+* Check version: coffee --version
+
+###Better solution
+* Download Node.js executable for Windows: http://nodejs.org/#download
+* Download CoffeeScript: http://github.com/jashkenas/coffee-script/tarball/master
+* Create coffee.cmd in your Windows directory:
+
+        @echo off
+        "%PROGRAMFILES%/Node/node.exe" "%PROGRAMFILES%/CoffeeScript/bin/coffee" %*
