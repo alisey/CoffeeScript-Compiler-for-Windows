@@ -1,8 +1,13 @@
-This is a standalone executable allowing you to compile [CoffeeScript](http://coffeescript.org/) files on Windows.  
-Download coffee.exe to your Windows directory (or any other directory in your %PATH%)
+###This compiler is obsolete
+Instead, use these simple official installation steps:
 
-###Usage
-Same as the original coffee command:
+1. Download and run [Node.js installer](http://nodejs.org/download/).
+2. Run on the command line: `npm install -g coffee-script`
+3. That's all. You can now run `coffee` from any directory.
+
+---
+### Old description
+This is a standalone [CoffeeScript](http://coffeescript.org/) compiler for Windows. Download coffee.exe to your Windows directory, or add it to your %PATH%. Usage is identical to the original `coffee` command, except that `--watch` is not supported:
 
     -c, --compile       compile to JavaScript and save as .js files
     -o, --output [DIR]  set the directory for compiled JavaScript
@@ -11,16 +16,8 @@ Same as the original coffee command:
     -v, --version       display CoffeeScript version
     -h, --help          display a list of available options
 
-If you specify a directory as a source, all .coffee files in that directory will be compiled recursively.
+If a directory is specified as a source, all .coffee files in that directory will be compiled recursively.
 
-###Updating CoffeeScript
+To update CoffeeScript:
 * Download latest [coffee-script.js](https://raw.github.com/jashkenas/coffee-script/master/extras/coffee-script.js) to the same directory as coffee.exe
 * Check version: coffee --version
-
-###Better solution
-* Download Node.js executable for Windows: http://nodejs.org/#download
-* Download CoffeeScript: http://github.com/jashkenas/coffee-script/tarball/master
-* Create coffee.cmd in your Windows directory:
-
-        @echo off
-        "%PROGRAMFILES%/Node/node.exe" "%PROGRAMFILES%/CoffeeScript/bin/coffee" %*
