@@ -1,4 +1,4 @@
-###This compiler is obsolete
+### This compiler is obsolete
 Instead, use these simple official installation steps:
 
 1. Download and run [Node.js installer](http://nodejs.org/download/).
